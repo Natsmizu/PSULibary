@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- ================= HEADER ================= -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#FFBB33">
+
+        <!-- Avatar -->
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/ic_profile_user"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_white"
+            android:padding="5dp" />
+
+        <!-- Nama -->
+        <TextView
+            android:id="@+id/txtNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="abdi wisnu pratama"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_marginLeft="10dp" />
+
+        <!-- Prodi -->
+        <TextView
+            android:id="@+id/txtProdi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEKNIK INFORMATIKA"
+            android:textSize="13sp"
+            android:textColor="#333333"
+            android:layout_below="@id/txtNama"
+            android:layout_toRightOf="@id/avatar"
+            android:layout_marginLeft="10dp" />
+
+
+    </RelativeLayout>
+
+    <!-- ================= STATISTIK ================= -->
+    <LinearLayout
+        android:id="@+id/statsBox"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:gravity="center"
+        android:background="@drawable/card_blue"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal">
+
+        <!-- Buku terbaca -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="0"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:text="BUKU TERBACA"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Buku dipinjam -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="0"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:text="BUKU DI PINJAM"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Buku dikembalikan -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="0"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:text="BUKU DI KEMBALIKAN"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ================= BUTTON MENU ================= -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statsBox"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="25dp">
+
+        <!-- Edit Profile -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_blue"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/outline_manage_accounts_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit peroflle"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+
+        <!-- Point Pinalti -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_blue"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_pinalti_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Point Pinalti"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+
+        <!-- Logout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_blue"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="90dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluar"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- ================= BOTTOM NAV ================= -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFBB33"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/home" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/book_24" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:src="@drawable/profil" />
+    </LinearLayout>
+
+</RelativeLayout>
