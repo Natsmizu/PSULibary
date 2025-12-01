@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup_round">
+
+    <ImageView
+        android:id="@+id/imgCoverDetail"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/txtJudulDetail"
+        android:text="Judul Buku"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/txtPenulisDetail"
+        android:text="Penulis"
+        android:textSize="14sp"
+        android:layout_marginTop="6dp"
+        android:textColor="#444444"/>
+
+    <TextView
+        android:id="@+id/txtTahunDetail"
+        android:text="2023"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:textColor="#444444"/>
+
+    <TextView
+        android:id="@+id/txtKeteranganDetail"
+        android:text="Keterangan buku..."
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:textColor="#444444"/>
+
+</LinearLayout>
