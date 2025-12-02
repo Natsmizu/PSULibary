@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="20dp"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_popup_round">
+    android:fillViewport="true"
+    android:background="@android:color/transparent">
 
-    <ImageView
-        android:id="@+id/imgCoverDetail"
-        android:layout_width="130dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center"
-        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_popup_round">
 
-    <TextView
-        android:id="@+id/txtJudulDetail"
-        android:text="Judul Buku"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp"
-        android:textColor="#000000"/>
+        <!-- Tombol Close -->
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end"
+            android:src="@drawable/close"
+            android:contentDescription="close" />
 
-    <TextView
-        android:id="@+id/txtPenulisDetail"
-        android:text="Penulis"
-        android:textSize="14sp"
-        android:layout_marginTop="6dp"
-        android:textColor="#444444"/>
+        <!-- Cover Buku -->
+        <ImageView
+            android:id="@+id/imgCover"
+            android:layout_width="160dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:src="@drawable/sample_cover"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_image_round" />
 
-    <TextView
-        android:id="@+id/txtTahunDetail"
-        android:text="2023"
-        android:textSize="14sp"
-        android:layout_marginTop="4dp"
-        android:textColor="#444444"/>
+        <!-- Judul Buku -->
+        <TextView
+            android:id="@+id/txtJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LASKAR PELANGI"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
 
-    <TextView
-        android:id="@+id/txtKeteranganDetail"
-        android:text="Keterangan buku..."
-        android:textSize="14sp"
-        android:layout_marginTop="8dp"
-        android:textColor="#444444"/>
+        <!-- Penulis -->
+        <TextView
+            android:id="@+id/txtPenulis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bayu"
+            android:textSize="18sp"
+            android:textColor="#444"/>
 
-</LinearLayout>
+        <!-- Tahun -->
+        <TextView
+            android:id="@+id/txtTahun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2001"
+            android:textSize="18sp"
+            android:textColor="#444"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Deskripsi -->
+        <TextView
+            android:id="@+id/txtDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi buku akan muncul di sini..."
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
